@@ -3,7 +3,7 @@ import { FaRegHeart } from 'react-icons/fa';
 const SingleChef = ({chef}) => {
     const {chef_picture, chef_name, years_of_experience, number_of_recipes, likes } = chef;
     return (
-        <div className='flex flex-col items-center bg-[#538017] rounded-xl justify-center gap-8'>
+        <div className='flex flex-col items-center shadow-lg bg-white rounded-xl justify-center gap-8 p-4'>
                 <img className='w-[150px] rounded-[50%] h-[150px]' src={chef_picture} alt="" />
                 <h2 className='text-2xl font-semibold'>{chef_name}</h2>
                 <div className='flex bg-[#FE8E78] rounded-xl px-6 py-4 justify-between items-center gap-4'>

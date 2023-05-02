@@ -10,7 +10,7 @@ const ChefContainer = () => {
         .then(data => setChefs(data.chefs))
     }, [])
     return (
-        <div className='p-4 mt-[60px] grid grid-cols-3 gap-3'>
+        <div className='p-4 mt-[60px] grid grid-cols-3 gap-4'>
             {
                 chefs.map(chef => <SingleChef key={chef.id} chef={chef}></SingleChef>)
             }

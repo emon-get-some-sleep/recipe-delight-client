@@ -3,6 +3,7 @@ import FoodBanner from '../FoodBanner/FoodBanner';
 import ChefContainer from '../ChefContainer/ChefContainer';
 import UserReview from '../UserReview/UserReview';
 import Satisfiction from '../Satisfiction/Satisfiction';
+import FoodGallary from '../FoodGallary/FoodGallary';
 
 const HomePage = () => {
     return (
@@ -11,6 +12,7 @@ const HomePage = () => {
             <ChefContainer></ChefContainer>
             <UserReview></UserReview>
             <Satisfiction></Satisfiction>
+            <FoodGallary></FoodGallary>
         </div>
     );
 };

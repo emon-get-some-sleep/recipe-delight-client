@@ -1,0 +1,42 @@
+.gallary::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    display: block;
+    background: linear-gradient(to right, rgba(50, 184, 77, 0.5), rgb(123, 235, 117));
+    z-index: 2;
+    transition: 0.5s all;
+    opacity: 0;
+}
+
+.gallary:hover::before{
+    opacity: 1;
+}
+
+.gallary img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 16px;
+}
+
+.gallary .info{
+    border-radius: 16px;
+    position: relative;
+    z-index: 3;
+    color: #fff;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: 0.5s all;
+}
+
+.gallary:hover .info{
+    transform: translateY(0);
+    opacity: 1;
+}

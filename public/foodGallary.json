@@ -1,0 +1,52 @@
+{
+    "indian_food": [
+        {
+            "id": 1,
+            "name": "Butter Chicken",
+            "description": "A popular North Indian dish made with marinated chicken cooked in a creamy tomato-based sauce.",
+            "image_url": "https://images.unsplash.com/photo-1517244683847-7456b63c5969?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=388&q=80"
+        },
+        {
+            "id": 2,
+            "name": "Palak Paneer",
+            "description": "A vegetarian dish from North India made with paneer (cottage cheese) and spinach.",
+            "image_url": "https://images.unsplash.com/photo-1606491956689-2ea866880c84?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=721&q=80"
+        },
+        {
+            "id": 3,
+            "name": "Samosas",
+            "description": "A popular Indian snack consisting of a crispy pastry shell filled with spiced potatoes, peas, and sometimes meat.",
+            "image_url": "https://images.unsplash.com/photo-1589301773859-bb024d3ad558?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
+        },
+        {
+            "id": 4,
+            "name": "Chole Bhature",
+            "description": "A Punjabi dish consisting of spicy chickpeas (chole) served with a fluffy deep-fried bread (bhature).",
+            "image_url": "https://images.unsplash.com/photo-1625398407796-82650a8c135f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=580&q=80"
+        },
+        {
+            "id": 5,
+            "name": "Dosa",
+            "description": "A South Indian crepe made from fermented rice and lentil batter, often served with chutney and sambar.",
+            "image_url": "https://images.unsplash.com/photo-1565557623262-b51c2513a641?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1071&q=80"
+        },
+        {
+            "id": 6,
+            "name": "Vada Pav",
+            "description": "A popular street food from Mumbai consisting of a potato fritter (vada) served in a bread roll (pav).",
+            "image_url": "https://images.unsplash.com/photo-1593560704563-f176a2eb61db?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=435&q=80"
+        },
+        {
+            "id": 7,
+            "name": "Rogan Josh",
+            "description": "A Kashmiri dish made with lamb in a rich and aromatic tomato-based sauce.",
+            "image_url": "https://images.unsplash.com/photo-1601050690597-df0568f70950?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
+        },
+        {
+            "id": 8,
+            "name": "Gulab Jamun",
+            "description": "A sweet dessert made from milk solids (khoya) and flour, served in a sugar syrup.",
+            "image_url": "https://images.unsplash.com/photo-1585937421612-70a008356fbe?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=436&q=80"
+        }
+    ]
+}
