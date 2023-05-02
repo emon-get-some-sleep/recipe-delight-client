@@ -1,0 +1,52 @@
+{
+    "chefs": [
+        {
+            "id": 1,
+            "chef_picture": "https://img.freepik.com/free-photo/young-confident-caucasian-cook-girl-chef-uniform-stands-sideways-holds-rolling-pin-isolated-violet-wall-with-copy-space_141793-33236.jpg?w=740&t=st=1683029647~exp=1683030247~hmac=259ce615ffc89f5ff30be8b3c503caf6d4a6861aae6db8060bc23e3e882ade25",
+            "chef_name": "Soha Sen Gupta",
+            "years_of_experience": 12,
+            "number_of_recipes": 8,
+            "likes": 6
+        },
+        {
+            "id": 2,
+            "chef_picture": "https://img.freepik.com/free-photo/image-cheerful-young-cook-uniform-standing-isolated-grey-wall_171337-5340.jpg?w=740&t=st=1683031552~exp=1683032152~hmac=5f0d2d92538a12cf6810433e2ccb0640d941d6ccbcfc11c6c4bc1ded9571b8ab",
+            "chef_name": "Vikas Khanna",
+            "years_of_experience": 10,
+            "number_of_recipes": 8,
+            "likes": 6
+        },
+        {
+            "id": 3,
+            "chef_picture": "https://img.freepik.com/premium-photo/happy-male-indian-chef-pointing-with-his-hands-grey-wall_156779-279.jpg?w=740",
+            "chef_name": "Sanjeev Kapoor",
+            "years_of_experience": 18,
+            "number_of_recipes": 6,
+            "likes": 9
+        },
+        {
+            "id": 4,
+            "chef_picture": "https://img.freepik.com/free-photo/smiling-young-male-cook-wearing-chef-uniform-glasses-holding-plate_141793-81087.jpg?w=740&t=st=1683031561~exp=1683032161~hmac=89b6c040f48ec0f11330f92c6bbe868f3a8fc23f1afb192f82f8b7cd78d5befe",
+            "chef_name": "Tarla Dalal",
+            "years_of_experience": 20,
+            "number_of_recipes": 4,
+            "likes": 2
+        },
+        {
+            "id": 5,
+            "chef_picture": "https://img.freepik.com/free-photo/young-male-cook-wearing-chef-uniform-glasses-holding-plate-pretending-spilling-salt_141793-81484.jpg?w=740&t=st=1683031564~exp=1683032164~hmac=1d32bf779b5f70a1622fca7ea369f6e175815f37ef9c27952b0dcad6b383fc40",
+            "chef_name": "Ranveer Brar",
+            "years_of_experience": 10,
+            "number_of_recipes": 5,
+            "likes": 8
+        },
+        {
+            "id": 6,
+            "chef_picture": "https://img.freepik.com/free-photo/confident-young-male-cook-chef-uniform-pointing-up-isolated-orange-wall-with-copy-space_141793-101269.jpg?w=740&t=st=1683031672~exp=1683032272~hmac=4d9b75b4a6dc2b6a3f23888d38ffb29c5a935ab4756ab38a2884fe955996c1d4",
+            "chef_name": "Madhur Jaffrey",
+            "years_of_experience": 15,
+            "number_of_recipes": 7,
+            "likes": 5
+        }
+    ]
+}
