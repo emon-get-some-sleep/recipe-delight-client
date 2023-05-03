@@ -7,6 +7,8 @@ const ChefRecipi = () => {
   const recipe = useLoaderData();
   // console.log(recipe);
   const {id, chef_picture, chef_name, years_of_experience, number_of_recipes, likes, recipes, about} = recipe;
+
+  
   return (
     <div className="grid grid-cols-4 mt-[100px] gap-3">
       <div className="col-span-1 rounded-[25px] shadow-lg p-4 bg-green-50 h-[500px]">
@@ -35,7 +37,7 @@ const ChefRecipi = () => {
       <div className="col-span-3 flex flex-col gap-3 border rounded-lg">
         
         {
-          recipes.map(recipe => <RecipeDetail key={recipe.recipe_id} recipe={recipe}></RecipeDetail>)
+          recipes.map((recipe) => <RecipeDetail key={recipe.recipe_id} recipe={recipe}></RecipeDetail>)
         }
       </div>
     </div>
