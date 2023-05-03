@@ -14,7 +14,7 @@ const HomePage = () => {
             <UserReview></UserReview>
             <Satisfiction></Satisfiction>
             <FoodGallary></FoodGallary>
-            <ChefRecipi></ChefRecipi>
+            
         </div>
     );
 };

@@ -5,7 +5,7 @@ const ChefContainer = () => {
     const [chefs, setChefs] = useState([]);
 
     useEffect(() => {
-        fetch('chef.json')
+        fetch('http://localhost:5000/chefs')
         .then(res => res.json())
         .then(data => setChefs(data.chefs))
     }, [])
