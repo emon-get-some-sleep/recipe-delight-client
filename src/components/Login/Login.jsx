@@ -1,6 +1,7 @@
 import React from "react";
 import './Login.css';
 import { Link } from "react-router-dom";
+import { FaGithub, FaGoogle } from "react-icons/fa";
 
 const Login = () => {
   return (
@@ -26,6 +27,16 @@ const Login = () => {
             </p>
           </div>
         </form>
+        <div className="flex  items-center justify-center gap-4 pb-2">
+          <button className="text-center text-sm border border-[#2691d9] hover:-translate-y-[5px] duration-500  rounded-lg h-[50px] p-2">
+            {" "}
+            <FaGoogle className="inline" /> Login with Google
+          </button>
+          <button className="text-center text-sm border border-[#2691d9] hover:-translate-y-[5px] duration-500  rounded-lg h-[50px] p-2">
+            {" "}
+            <FaGithub className="inline" /> Login with Github
+          </button>
+        </div>
       </div>
     </div>
   );

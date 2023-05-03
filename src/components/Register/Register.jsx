@@ -1,9 +1,10 @@
 import React from "react";
+import { FaGithub, FaGoogle } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
 const Register = () => {
   return (
-    <div className="h-screen mt-[60px] rounded-lg overflow-hidden flex items-center justify-center bg-green-300">
+    <div className="h-screen  mt-[60px] rounded-lg overflow-hidden flex items-center justify-center bg-green-300">
       <div className="bg-white w-[400px] rounded-[10px]">
         <h1 className="text-center pb-5 border-b text-2xl font-bold py-4">
           Register
@@ -63,17 +64,27 @@ const Register = () => {
           <input
             className="h-[50px] w-full bg-[#2691d9] border rounded-[25px] text-lg text-white font-bold cursor-pointer outline-none hover:border-[#2691d9] duration-500"
             type="submit"
-            value="Login"
+            value="Register"
           />
           <div>
             <p className="my-[30px] text-center font-medium text-sm text-[#666666] ">
               Already have an account?
               <Link className="text-[#2691d9] hover:underline" to="/login">
-               Login
+                Login
               </Link>
             </p>
           </div>
         </form>
+        <div className="flex  items-center justify-center gap-4 pb-2">
+          <button className="text-center text-sm border border-[#2691d9] hover:-translate-y-[5px] duration-500  rounded-lg h-[50px] p-2">
+            {" "}
+            <FaGoogle className="inline" /> Register with Google
+          </button>
+          <button className="text-center text-sm border border-[#2691d9] hover:-translate-y-[5px] duration-500  rounded-lg h-[50px] p-2">
+            {" "}
+            <FaGithub className="inline" /> Register with Github
+          </button>
+        </div>
       </div>
     </div>
   );
