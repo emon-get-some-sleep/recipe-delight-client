@@ -5,7 +5,7 @@ import { FaGithub, FaGoogle } from "react-icons/fa";
 import { AuthContext } from "../../AuthProviders/AuthProviders";
 
 const Login = () => {
-  const {signIn} = useContext(AuthContext);
+  const {signIn, signInWithGoogle, signInWithGithub} = useContext(AuthContext);
   const [error, setError] = useState('');
   const handleLogin = (event) => {
     event.preventDefault();
@@ -22,6 +22,27 @@ const Login = () => {
       setError(error.message);
     })
   } 
+
+  const googleSignIn = () => {
+    signInWithGoogle()
+    .then(result => {
+      const loggedUser = result.user;
+      console.log(loggedUser);
+    })
+    .catch(error => {
+      setError(error.message);
+    })
+  }
+  const githubSignIn = () => {
+    signInWithGithub()
+    .then(result => {
+      const loggedUser = result.user;
+      console.log(loggedUser);
+    })
+    .catch(error => {
+      setError(error.message);
+    })
+  }
   return (
     <div className="h-screen mt-[60px] rounded-lg overflow-hidden flex items-center justify-center bg-green-300">
       <div className="bg-white w-[400px] rounded-[10px]">
@@ -49,11 +70,11 @@ const Login = () => {
           error && <p className="text-red-500 text-center my-2 font-bold text-sm">{error}</p>
         }
         <div className="flex  items-center justify-center gap-4 pb-2">
-          <button className="text-center text-sm border border-[#2691d9] hover:-translate-y-[5px] duration-500  rounded-lg h-[50px] p-2">
+          <button onClick={signInWithGoogle} className="text-center text-sm border border-[#2691d9] hover:-translate-y-[5px] duration-500  rounded-lg h-[50px] p-2">
             {" "}
             <FaGoogle className="inline" /> Login with Google
           </button>
-          <button className="text-center text-sm border border-[#2691d9] hover:-translate-y-[5px] duration-500  rounded-lg h-[50px] p-2">
+          <button onClick={signInWithGithub} className="text-center text-sm border border-[#2691d9] hover:-translate-y-[5px] duration-500  rounded-lg h-[50px] p-2">
             {" "}
             <FaGithub className="inline" /> Login with Github
           </button>
