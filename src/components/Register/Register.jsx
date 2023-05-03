@@ -5,7 +5,7 @@ import { AuthContext } from "../../AuthProviders/AuthProviders";
 
 const Register = () => {
   const [error, setError] = useState('');
-  const {newUser} = useContext(AuthContext);
+  const {newUser, auth, updateProfile, signUpWithGoogle, signUpWithGithub} = useContext(AuthContext);
   const handleForm = event => {
     event.preventDefault();
     const form = event.target;
@@ -22,13 +22,42 @@ const Register = () => {
     newUser(name, photoURL, email, password)
     .then(result => {
       const createdUser = result.user;
-      console.log(createdUser);
+      
+      updateProfile(auth.currentUser, {
+        displayName: name, photoURL: photoURL
+
+      })
+      .then(() => {
+        console.log(createdUser);
+      })
+
     })
     .catch(error => {
       console.log(error);
     })
     form.reset();
     setError('');
+  }
+
+  const handleGoogleSignUp = () => {
+    signUpWithGoogle()
+    .then(result => {
+      const newUser = result.user;
+      console.log(newUser);
+    })
+    .catch(error => {
+      setError(error.message);
+    })
+  }
+  const handleGithubSignUp = () => {
+    signUpWithGithub()
+    .then(result => {
+      const newUser = result.user;
+      console.log(newUser);
+    })
+    .catch(error => {
+      setError(error.message);
+    })
   }
   return (
     <div className="h-screen  mt-[60px] rounded-lg overflow-hidden flex items-center justify-center bg-green-300">
@@ -106,11 +135,11 @@ const Register = () => {
           error && <p className="text-red-500 text-center my-2 font-bold text-sm">{error}</p>
         }
         <div className="flex  items-center justify-center gap-4 pb-2">
-          <button className="text-center text-sm border border-[#2691d9] hover:-translate-y-[5px] duration-500  rounded-lg h-[50px] p-2">
+          <button onClick={handleGoogleSignUp} className="text-center text-sm border border-[#2691d9] hover:-translate-y-[5px] duration-500  rounded-lg h-[50px] p-2">
             {" "}
             <FaGoogle className="inline" /> Register with Google
           </button>
-          <button className="text-center text-sm border border-[#2691d9] hover:-translate-y-[5px] duration-500  rounded-lg h-[50px] p-2">
+          <button onClick={handleGithubSignUp} className="text-center text-sm border border-[#2691d9] hover:-translate-y-[5px] duration-500  rounded-lg h-[50px] p-2">
             {" "}
             <FaGithub className="inline" /> Register with Github
           </button>

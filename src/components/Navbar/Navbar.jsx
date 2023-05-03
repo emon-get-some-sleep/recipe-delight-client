@@ -1,9 +1,20 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { FaBars,  FaUtensils } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import { AuthContext } from "../../AuthProviders/AuthProviders";
 
 const Navbar = () => {
-    const [showMenu, setShowMenu] = useState(false)
+   const {user, logOut} = useContext(AuthContext);
+   
+    const [showMenu, setShowMenu] = useState(false);
+
+    const handleLogOut = () => {
+      logOut()
+      .then()
+      .catch(error => {
+        console.log(error);
+      })
+    }
   return (
     <>
     <nav className="flex  gap-2 justify-between items-center px-2">
@@ -16,8 +27,16 @@ const Navbar = () => {
         <Link className="font-medium text-xl" to="/Blogs">Blogs</Link>
         <Link className="font-medium text-xl" to="/recipi">Recipi</Link>
       </div>
-      <div>
+      <div className="tooltip flex gap-3" data-tip={user?.displayName}>
+        {!user ?
         <Link to="/login"><button className="hidden md:block bg-[#3A1C36] text-white font-medium text-xl border px-6 py-4 rounded-lg">Login</button></Link>
+        :
+        <>
+        <img src={user.photoURL} className="w-[50px] h-[50px] rounded-[50%]" alt="" />
+        <button onClick={handleLogOut} className="text-sm text-gray-700">Sign Out</button>
+        </>
+        }
+        
       </div>
       <div className="md:hidden">
       <FaBars onClick={() => setShowMenu(!showMenu)} className="text-2xl"/>
@@ -29,6 +48,7 @@ const Navbar = () => {
         <Link className="font-medium text-xl" to="/Blogs">Blogs</Link>
         <Link className="font-medium text-xl" to="/recipi">Recipi</Link>
         <button className="font-medium bg-[#3A1C36] text-white text-xl border px-6 py-4 rounded-lg">Login</button>
+        
     </div>}
     </>
   );

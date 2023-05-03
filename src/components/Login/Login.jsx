@@ -1,14 +1,32 @@
-import React from "react";
+import React, { useContext, useState } from "react";
 import './Login.css';
 import { Link } from "react-router-dom";
 import { FaGithub, FaGoogle } from "react-icons/fa";
+import { AuthContext } from "../../AuthProviders/AuthProviders";
 
 const Login = () => {
+  const {signIn} = useContext(AuthContext);
+  const [error, setError] = useState('');
+  const handleLogin = (event) => {
+    event.preventDefault();
+    const form = event.target;
+    const email = form.email.value;
+    const password = form.password.value;
+    signIn(email, password)
+    .then(result => {
+      const loggedUser = result.user;
+      console.log(loggedUser);
+      form.reset();
+    })
+    .catch(error => {
+      setError(error.message);
+    })
+  } 
   return (
     <div className="h-screen mt-[60px] rounded-lg overflow-hidden flex items-center justify-center bg-green-300">
       <div className="bg-white w-[400px] rounded-[10px]">
         <h1 className="text-center pb-5 border-b text-2xl font-bold py-4">Login</h1>
-        <form className="px-[40px]">
+        <form onSubmit={handleLogin} className="px-[40px]">
           <div className="relative my-[30px] border-b border-[#adadad]">
             <input className="w-full login-form px-[5px] h-[40px] text-sm border-0 bg-none outline-none" type="email" name="email" required/>
             <span className="optional"></span>
@@ -27,6 +45,9 @@ const Login = () => {
             </p>
           </div>
         </form>
+        {
+          error && <p className="text-red-500 text-center my-2 font-bold text-sm">{error}</p>
+        }
         <div className="flex  items-center justify-center gap-4 pb-2">
           <button className="text-center text-sm border border-[#2691d9] hover:-translate-y-[5px] duration-500  rounded-lg h-[50px] p-2">
             {" "}
