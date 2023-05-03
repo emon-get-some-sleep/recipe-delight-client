@@ -31,10 +31,10 @@ const AuthProviders = ({children}) => {
     }
 
     const signInWithGithub = () => {
-       return signInWithRedirect(auth, githubProvider);
+       return signInWithPopup(auth, githubProvider);
     }
     const signInWithGoogle = () => {
-       return signInWithRedirect(auth, googleProvider);
+       return signInWithPopup(auth, googleProvider);
     }
     
     const authDetails = {
