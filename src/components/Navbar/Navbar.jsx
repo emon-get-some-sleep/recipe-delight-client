@@ -17,7 +17,7 @@ const Navbar = () => {
         <Link className="font-medium text-xl" to="/recipi">Recipi</Link>
       </div>
       <div>
-        <button className="hidden md:block bg-[#3A1C36] text-white font-medium text-xl border px-6 py-4 rounded-lg">Login</button>
+        <Link to="/login"><button className="hidden md:block bg-[#3A1C36] text-white font-medium text-xl border px-6 py-4 rounded-lg">Login</button></Link>
       </div>
       <div className="md:hidden">
       <FaBars onClick={() => setShowMenu(!showMenu)} className="text-2xl"/>
