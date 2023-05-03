@@ -5,10 +5,12 @@ import Login from "../components/Login/Login";
 import Register from "../components/Register/Register";
 import ChefRecipi from "../components/ChefRecipi/ChefRecipi";
 import PrivateRoutes from './PrivateRoutes';
+import NotFound from "./NotFound";
 const router = createBrowserRouter([
     {
       path: "/",
       element: <Main></Main>,
+      errorElement: <NotFound></NotFound>,
       children: [
         {
           path:'/',
@@ -24,7 +26,7 @@ const router = createBrowserRouter([
           element: <Register></Register>
         },
         {
-          path: ':id',
+          path: 'chef/:id',
           element: <PrivateRoutes><ChefRecipi></ChefRecipi></PrivateRoutes>,
           loader: ({params}) => fetch(`http://localhost:5000/chefs/${params.id}`),
         }

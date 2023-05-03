@@ -5,7 +5,7 @@ const SingleChef = ({chef}) => {
     const {id, chef_picture, chef_name, years_of_experience, number_of_recipes, likes } = chef;
     const navigate = useNavigate();
     const visitChef = (id) => {
-        navigate(`/${id}`);
+        navigate(`/chef/${id}`);
     }
     return (
         <div className='flex flex-col items-center shadow-lg bg-white rounded-xl justify-center gap-8 p-4'>

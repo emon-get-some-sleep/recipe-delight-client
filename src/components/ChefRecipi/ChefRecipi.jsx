@@ -37,7 +37,7 @@ const ChefRecipi = () => {
       <div className="col-span-3 flex flex-col gap-3 border rounded-lg">
         
         {
-          recipes.map((recipe) => <RecipeDetail key={recipe.recipe_id} recipe={recipe}></RecipeDetail>)
+          recipes.map((recipe, index) => <RecipeDetail key={index} recipe={recipe}></RecipeDetail>)
         }
       </div>
     </div>

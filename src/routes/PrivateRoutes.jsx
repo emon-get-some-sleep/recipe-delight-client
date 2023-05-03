@@ -1,11 +1,15 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext} from 'react';
+
+
+
 import { AuthContext } from '../AuthProviders/AuthProviders';
-import { Navigate, useLocation } from 'react-router-dom';
 import { HashLoader } from 'react-spinners';
+import { Navigate, useLocation } from 'react-router-dom';
 
 const PrivateRoutes = ({children}) => {
-    const {user, loading} = useContext(AuthContext);
-    // const [color, setColor] = useState("#ffffff");
+    
+    const {loading, user} = useContext(AuthContext);
+    const location = useLocation();
     const override = {
         display: "block",
         margin: "30px auto",
@@ -22,7 +26,7 @@ const PrivateRoutes = ({children}) => {
         data-testid="loader"
       />
     }
-    const location = useLocation();
+    
 
     if(user){
         return children;
