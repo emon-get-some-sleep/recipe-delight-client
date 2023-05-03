@@ -5,11 +5,11 @@ import { useLoaderData } from "react-router-dom";
 import RecipeDetail from "../RecipeDetail/RecipeDetail";
 const ChefRecipi = () => {
   const recipe = useLoaderData();
-  console.log(recipe);
-  const {id, chef_picture, chef_name, years_of_experience, number_of_recipes, likes, recipes} = recipe;
+  // console.log(recipe);
+  const {id, chef_picture, chef_name, years_of_experience, number_of_recipes, likes, recipes, about} = recipe;
   return (
     <div className="grid grid-cols-4 mt-[100px] gap-3">
-      <div className="col-span-1 rounded-[25px] shadow-lg p-4 bg-green-50 h-auto">
+      <div className="col-span-1 rounded-[25px] shadow-lg p-4 bg-green-50 h-[500px]">
         <img
           className="w-[200px] rounded-lg"
           src={chef_picture}
@@ -29,16 +29,13 @@ const ChefRecipi = () => {
           <FaHeart className="inline text-red-500 mr-2" /> {likes} likes
         </p>
         <p className="text-sm mt-4">
-          Arab sen is a highly successful chef based in Mumbai. He owns 5
-          restaurant. He is a local celebrity. Known for great cooking and a
-          warm smile, people come from all over the country to eat is special
-          recipes.
+        {about}
         </p>
       </div>
       <div className="col-span-3 flex flex-col gap-3 border rounded-lg">
         
         {
-          recipes.map(recipe => <RecipeDetail key={recipe.recipe_name} recipe={recipe}></RecipeDetail>)
+          recipes.map(recipe => <RecipeDetail key={recipe.recipe_id} recipe={recipe}></RecipeDetail>)
         }
       </div>
     </div>

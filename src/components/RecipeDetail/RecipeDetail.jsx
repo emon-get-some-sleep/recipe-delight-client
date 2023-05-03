@@ -28,12 +28,13 @@ const RecipeDetail = ({recipe}) => {
         <p className="text-sm">
           {" "}
           <span className="font-bold text-xl">Ingrident</span> 
-          <ol>
+          
+        </p>
+        <ol className="text-sm">
             {
-                ingredients.map(each => <li key={each}>{each}</li>)
+                ingredients.map((each, idx) => <li key={idx}>{each}</li>)
             }
           </ol>
-        </p>
         <span className="text-sm font-medium">
           <DynamicStar
             height={15}

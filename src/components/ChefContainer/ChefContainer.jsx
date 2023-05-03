@@ -9,6 +9,7 @@ const ChefContainer = () => {
         .then(res => res.json())
         .then(data => setChefs(data.chefs))
     }, [])
+    
     return (
         <div className='p-4 mt-[60px] grid grid-cols-3 gap-4'>
             {
