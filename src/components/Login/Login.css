@@ -3,12 +3,18 @@
     position: absolute;
     top: 40px;
     left: 0;
-    width: 100%;
+    width: 0%;
     height: 2px;
     background: #2691d9;
+    transition: 0.5s;
 }
 
 .login-form:focus ~ label{
     color: #2691d9;
     top: -5px;
+}
+
+.login-form:focus ~ .optional::before
+{
+    width: 100%;
 }
