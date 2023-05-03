@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { DynamicStar } from "react-dynamic-star";
 import { FaHeart } from "react-icons/fa";
+import LazyLoad from "react-lazy-load";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
@@ -17,11 +18,13 @@ const RecipeDetail = ({recipe}) => {
   return (
     <div className="grid grid-cols-3  p-[40px] justify-between rounded-lg gap-3 bg-green-50">
       <div className="col-span-1">
+        <LazyLoad>
         <img
           className=" w-[400px] h-full  rounded-xl"
           src={image_url}
           alt=""
         />
+        </LazyLoad>
       </div>
       <div className="col-span-1">
         <h2 className="text-xl font-bold my-3">{recipe_name}</h2>

@@ -3,6 +3,7 @@ import { FaHeart, FaRegStickyNote, FaUserAstronaut } from "react-icons/fa";
 import { DynamicStar } from 'react-dynamic-star';
 import { useLoaderData } from "react-router-dom";
 import RecipeDetail from "../RecipeDetail/RecipeDetail";
+import LazyLoad from "react-lazy-load";
 const ChefRecipi = () => {
   const recipe = useLoaderData();
   // console.log(recipe);
@@ -12,11 +13,13 @@ const ChefRecipi = () => {
   return (
     <div className="grid grid-cols-4 mt-[100px] gap-3">
       <div className="col-span-1 rounded-[25px] shadow-lg p-4 bg-green-50 h-[500px]">
+        <LazyLoad>
         <img
           className="w-[200px] rounded-lg"
           src={chef_picture}
           alt=""
         />
+        </LazyLoad>
         <h2 className="font-bold text-[20px] my-3">{chef_name}</h2>
         <p className="font-medium text-sm">
           {" "}

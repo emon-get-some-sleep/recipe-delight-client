@@ -1,4 +1,5 @@
 import React from 'react';
+import LazyLoad from 'react-lazy-load';
 
 const FoodBanner = () => {
     return (
@@ -9,7 +10,9 @@ const FoodBanner = () => {
            
             </div>
             <div className='rounded-lg flex-1'>
+            <LazyLoad>
             <img className='rounded-lg max-w-full' src="https://images.pexels.com/photos/1099680/pexels-photo-1099680.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="" />
+            </LazyLoad>
             </div>
         </div>
     );
