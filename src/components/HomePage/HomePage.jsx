@@ -4,6 +4,7 @@ import ChefContainer from '../ChefContainer/ChefContainer';
 import UserReview from '../UserReview/UserReview';
 import Satisfiction from '../Satisfiction/Satisfiction';
 import FoodGallary from '../FoodGallary/FoodGallary';
+import ChefRecipi from '../ChefRecipi/ChefRecipi';
 
 const HomePage = () => {
     return (
@@ -13,6 +14,7 @@ const HomePage = () => {
             <UserReview></UserReview>
             <Satisfiction></Satisfiction>
             <FoodGallary></FoodGallary>
+            <ChefRecipi></ChefRecipi>
         </div>
     );
 };
