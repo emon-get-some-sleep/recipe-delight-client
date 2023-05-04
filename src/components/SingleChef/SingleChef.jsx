@@ -15,10 +15,10 @@ const SingleChef = ({chef}) => {
                 </LazyLoad>
                 
                 <h2 className='text-2xl font-semibold'>{chef_name}</h2>
-                <div className='flex bg-[#FE8E78] rounded-xl px-6 py-4 justify-between items-center gap-4'>
-                    <p className='text-sm  font-medium'>{years_of_experience} years of experience</p>
-                    <p className='text-sm font-medium'>{number_of_recipes} Recipes</p>
-                    <p className='text-sm flex gap-2 items-center font-medium'> <FaRegHeart className='text-red-500' /> {likes} Like</p>
+                <div className='flex  rounded-xl px-6 justify-between items-center gap-4'>
+                    <p className='text-sm flex flex-col items-center font-medium'> <span className='font-bold text-2xl'>{years_of_experience}</span> <span className=''>years of experience</span></p>
+                    <p className='text-sm flex-1 font-medium flex flex-col items-center'><span className='font-bold text-2xl'>{number_of_recipes}</span> <span>Recipes</span></p>
+                    <p className='text-sm flex-1 flex flex-col items-center  font-medium'>  <span className='font-bold text-2xl'>{likes}</span> <span> <FaRegHeart className='text-red-500 inline' /> Like</span></p>
                 </div>
                 <button onClick={() => visitChef(id)} className="font-medium bg-[#3A1C36] text-white border px-6 py-4 rounded-lg">View Recipies</button>
             </div>
