@@ -5,7 +5,7 @@ import SingleGallary from "../SingleGallary/SingleGallary";
 const FoodGallary = () => {
   const [gallary, setGallary] = useState([]);
   useEffect(() => {
-    fetch("http://localhost:5000/foodGallary")
+    fetch("https://recipi-delight-server.vercel.app/foodGallary")
       .then((res) => res.json())
       .then((data) => setGallary(data.indian_food));
   }, []);

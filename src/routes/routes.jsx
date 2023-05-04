@@ -30,12 +30,12 @@ const router = createBrowserRouter([
         {
           path: 'blogs',
           element: <ShowBlogs></ShowBlogs>,
-          loader: () => fetch('http://localhost:5000/blogs')
+          loader: () => fetch('https://recipi-delight-server.vercel.app/blogs')
         },
         {
           path: 'chef/:id',
           element: <PrivateRoutes><ChefRecipi></ChefRecipi></PrivateRoutes>,
-          loader: ({params}) => fetch(`http://localhost:5000/chefs/${params.id}`),
+          loader: ({params}) => fetch(`https://recipi-delight-server.vercel.app/chefs/${params.id}`),
         }
       ]
     },
