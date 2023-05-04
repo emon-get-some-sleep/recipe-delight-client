@@ -1,6 +1,6 @@
 import React, { useContext, useState } from "react";
 import { FaBars,  FaUtensils } from "react-icons/fa";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "../../AuthProviders/AuthProviders";
 
 const Navbar = () => {
@@ -23,9 +23,34 @@ const Navbar = () => {
         <h1 className="font-semibold text-2xl">Recepi Delight</h1>
       </div>
       <div className="hidden md:flex gap-4">
-        <Link className="font-medium text-xl" to="/">Home</Link>
+        
+        {/* <Link className="font-medium text-xl" to="/">Home</Link>
         <Link className="font-medium text-xl" to="/Blogs">Blogs</Link>
-        <Link className="font-medium text-xl" to="/recipi">Recipi</Link>
+        <Link className="font-medium text-xl" to="/recipi">Recipi</Link> */}
+        <NavLink
+        to="/"
+        className={({ isActive, isPending }) =>
+        isPending ? "pending" : isActive ? "active" : ""
+      }
+        >
+          Home
+        </NavLink>
+        <NavLink
+        to="/blogs"
+        className={({ isActive, isPending }) =>
+        isPending ? "pending" : isActive ? "active" : ""
+      }
+        >
+          Blogs
+        </NavLink>
+        <NavLink
+        to="/recipe"
+        className={({ isActive, isPending }) =>
+        isPending ? "pending" : isActive ? "active" : ""
+      }
+        >
+          Recipe
+        </NavLink>
       </div>
       <div className="tooltip hidden md:flex gap-3" data-tip={user?.displayName}>
         {!user ?

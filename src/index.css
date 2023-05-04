@@ -7,3 +7,9 @@
   font-family: 'Poppins', sans-serif;
   
 }
+
+.active{
+  color: blue;
+  font-weight: bold;
+  text-decoration: underline;
+}

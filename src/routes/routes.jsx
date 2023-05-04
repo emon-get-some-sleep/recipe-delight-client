@@ -7,6 +7,7 @@ import ChefRecipi from "../components/ChefRecipi/ChefRecipi";
 import PrivateRoutes from './PrivateRoutes';
 import NotFound from "./NotFound";
 import Blogs from "../components/Blogs/Blogs";
+import ShowBlogs from "../components/ShowBlogs/ShowBlogs";
 const router = createBrowserRouter([
     {
       path: "/",
@@ -28,7 +29,8 @@ const router = createBrowserRouter([
         },
         {
           path: 'blogs',
-          element: <Blogs></Blogs>
+          element: <ShowBlogs></ShowBlogs>,
+          loader: () => fetch('http://localhost:5000/blogs')
         },
         {
           path: 'chef/:id',
