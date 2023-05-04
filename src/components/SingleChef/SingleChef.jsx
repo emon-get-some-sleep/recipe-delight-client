@@ -15,7 +15,7 @@ const SingleChef = ({chef}) => {
                 </LazyLoad>
                 
                 <h2 className='text-2xl font-semibold'>{chef_name}</h2>
-                <div className='flex  rounded-xl px-6 justify-between items-center gap-4'>
+                <div className='flex flex-col sm:flex-row rounded-xl px-4 justify-between items-center gap-4'>
                     <p className='text-sm flex flex-col items-center font-medium'> <span className='font-bold text-2xl'>{years_of_experience}</span> <span className=''>years of experience</span></p>
                     <p className='text-sm flex-1 font-medium flex flex-col items-center'><span className='font-bold text-2xl'>{number_of_recipes}</span> <span>Recipes</span></p>
                     <p className='text-sm flex-1 flex flex-col items-center  font-medium'>  <span className='font-bold text-2xl'>{likes}</span> <span> <FaRegHeart className='text-red-500 inline' /> Like</span></p>

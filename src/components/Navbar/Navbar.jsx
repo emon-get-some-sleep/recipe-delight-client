@@ -22,9 +22,9 @@ const Navbar = () => {
   return (
     <>
     <nav className="flex  gap-2 justify-between items-center px-2">
-      <div className="flex items-center gap-2">
-        <FaUtensils className="text-green-500 text-2xl"></FaUtensils>
-        <h1 className="font-semibold text-2xl">Recepi Delight</h1>
+      <div>
+        
+        <Link className="flex items-center gap-2" to="/"><FaUtensils className="text-green-500 text-2xl"></FaUtensils><h1 className="font-semibold text-2xl">Recepi Delight</h1></Link>
       </div>
       <div className="hidden md:flex gap-4">
         
