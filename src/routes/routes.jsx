@@ -9,6 +9,7 @@ import NotFound from "./NotFound";
 import Blogs from "../components/Blogs/Blogs";
 import ShowBlogs from "../components/ShowBlogs/ShowBlogs";
 import UpdateUser from "../components/UpdateUser/UpdateUser";
+import MyRecipe from "../components/MyRecipe/MyRecipe";
 const router = createBrowserRouter([
     {
       path: "/",
@@ -41,6 +42,11 @@ const router = createBrowserRouter([
         {
           path: 'updateUser',
           element: <PrivateRoutes><UpdateUser></UpdateUser></PrivateRoutes>
+        },
+        {
+          path: 'recipe',
+          element: <MyRecipe></MyRecipe>,
+          loader: () => fetch('https://recipi-delight-server.vercel.app/chefs')
         }
       ]
     },

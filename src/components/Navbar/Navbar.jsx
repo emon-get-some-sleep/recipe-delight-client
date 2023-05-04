@@ -75,7 +75,7 @@ const Navbar = () => {
         
         <Link className="font-medium text-xl" to="/">Home</Link>
         <Link className="font-medium text-xl" to="/Blogs">Blogs</Link>
-        <Link className="font-medium text-xl" to="/recipi">Recipi</Link>
+        <Link className="font-medium text-xl" to="/recipe">Recipi</Link>
         {/* <button className="font-medium bg-[#3A1C36] text-white text-xl border px-6 py-4 rounded-lg">Login</button> */}
         {!user ?
         <Link to="/login"><button className="bg-[#3A1C36] text-white font-medium text-xl border px-6 py-4 rounded-lg">Login</button></Link>
