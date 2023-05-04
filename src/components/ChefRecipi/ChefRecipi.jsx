@@ -12,7 +12,7 @@ const ChefRecipi = () => {
   
   return (
     <div className="grid grid-cols-4 mt-[100px] gap-3">
-      <div className="col-span-1 rounded-[25px] shadow-lg p-4 bg-green-50 h-[500px]">
+      <div className="col-span-4 md:col-span-1 rounded-[25px] shadow-lg p-4 bg-green-50 h-[500px]">
         <LazyLoad>
         <img
           className="w-[200px] rounded-lg"
@@ -37,7 +37,7 @@ const ChefRecipi = () => {
         {about}
         </p>
       </div>
-      <div className="col-span-3 flex flex-col gap-3 border rounded-lg">
+      <div className="col-span-4 md:col-span-3 flex flex-col gap-3 border rounded-lg">
         
         {
           recipes.map((recipe, index) => <RecipeDetail key={index} recipe={recipe}></RecipeDetail>)

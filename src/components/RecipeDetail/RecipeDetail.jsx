@@ -16,7 +16,7 @@ const RecipeDetail = ({recipe}) => {
     const {image_url, recipe_name, rating, description, cooking_method, ingredients} = recipe;
     
   return (
-    <div className="grid grid-cols-3  p-[40px] justify-between rounded-lg gap-3 bg-green-50">
+    <div className="grid grid-cols-1 md:grid-cols-2  p-[40px] justify-between rounded-lg gap-4 bg-green-50">
       <div className="col-span-1">
         <LazyLoad>
         <img
