@@ -1,10 +1,14 @@
 import React, { useContext, useState } from "react";
 import { FaBars,  FaUtensils } from "react-icons/fa";
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../AuthProviders/AuthProviders";
 
 const Navbar = () => {
    const {user, logOut} = useContext(AuthContext);
+   const navigate = useNavigate();
+   const userProfile = () => {
+    navigate('/updateUser');
+   }
    
     const [showMenu, setShowMenu] = useState(false);
 
@@ -57,7 +61,7 @@ const Navbar = () => {
         <Link to="/login"><button className="hidden md:block bg-[#3A1C36] text-white font-medium text-xl border px-6 py-4 rounded-lg">Login</button></Link>
         :
         <>
-        <img src={user.photoURL} className="w-[50px] h-[50px] rounded-[50%]" alt="" />
+        <img onClick={userProfile} src={user.photoURL} className="w-[50px] h-[50px] rounded-[50%]" alt="" />
         <button onClick={handleLogOut} className="text-sm text-gray-700">Sign Out</button>
         </>
         }

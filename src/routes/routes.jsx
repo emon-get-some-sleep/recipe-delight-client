@@ -8,6 +8,7 @@ import PrivateRoutes from './PrivateRoutes';
 import NotFound from "./NotFound";
 import Blogs from "../components/Blogs/Blogs";
 import ShowBlogs from "../components/ShowBlogs/ShowBlogs";
+import UpdateUser from "../components/UpdateUser/UpdateUser";
 const router = createBrowserRouter([
     {
       path: "/",
@@ -36,6 +37,10 @@ const router = createBrowserRouter([
           path: 'chef/:id',
           element: <PrivateRoutes><ChefRecipi></ChefRecipi></PrivateRoutes>,
           loader: ({params}) => fetch(`https://recipi-delight-server.vercel.app/chefs/${params.id}`),
+        },
+        {
+          path: 'updateUser',
+          element: <PrivateRoutes><UpdateUser></UpdateUser></PrivateRoutes>
         }
       ]
     },
