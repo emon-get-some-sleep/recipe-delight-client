@@ -3,15 +3,26 @@ import './Login.css';
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { FaGithub, FaGoogle } from "react-icons/fa";
 import { AuthContext } from "../../AuthProviders/AuthProviders";
+import { toast } from "react-toastify";
 
 const Login = () => {
-  const {signIn, signInWithGoogle, signInWithGithub} = useContext(AuthContext);
+  const {signIn, user, signInWithGoogle, signInWithGithub, sendPasswordResetEmail, auth} = useContext(AuthContext);
   const [error, setError] = useState('');
   const location = useLocation();
   const navigate = useNavigate();
   const from = location.state?.from?.pathname || '/';
   // console.log(from)
   
+
+  const handleReset = () => {
+    sendPasswordResetEmail(auth, user.email)
+    .then(() => {
+      toast.success('Password Reset email has been sent')
+    })
+    .catch(error => {
+      toast.error(error.message);
+    })
+  }
   const handleLogin = (event) => {
     event.preventDefault();
     const form = event.target;
@@ -66,7 +77,7 @@ const Login = () => {
             <span className="optional"></span>
             <label className="text-sm absolute duration-500 top-[50%] left-[5px] text-[#adadad] pointer-events-none -translate-y-[50%]">Enter Password</label>
           </div>
-          <div className="mb-5 ml-[5px] -mt-5px text-sm text-[#a6a6a6] cursor-pointer hover:underline">Forgot Password?</div>
+          <div  className="mb-5 ml-[5px] -mt-5px text-sm text-[#a6a6a6] cursor-pointer hover:underline"><span onClick={handleReset}>Reset Password</span></div>
           <input className="h-[50px] w-full bg-[#2691d9] border rounded-[25px] text-lg text-white font-bold cursor-pointer outline-none hover:border-[#2691d9] duration-500" type="submit" value="Login" />
           <div>
             <p className="my-[30px] text-center font-medium text-sm text-[#666666] ">
