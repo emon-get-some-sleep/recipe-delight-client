@@ -15,7 +15,7 @@ const FoodGallary = () => {
         Food Gallary
       </h1>
       <p className="font-semibold text-xl text-center underline">Our most Famous Items</p>
-      <div className="grid mt-[40px] grid-cols-4 gap-x-4 gap-y-6">
+      <div className="grid mt-[40px] grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-x-4 gap-y-6">
         {gallary.map((data) => (
           <SingleGallary key={data.id} data={data}></SingleGallary>
         ))}
