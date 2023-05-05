@@ -21,9 +21,9 @@ const HomePage = () => {
             <Satisfiction></Satisfiction>
             </Slide>
 
-            <Slide direction='right' duration={1000}>
+           
             <FoodGallary></FoodGallary>
-            </Slide>
+            
             
             
             

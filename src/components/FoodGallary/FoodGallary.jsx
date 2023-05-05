@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./FoodGallary.css";
 import SingleGallary from "../SingleGallary/SingleGallary";
+import { Slide } from "react-awesome-reveal";
 
 const FoodGallary = () => {
   const [gallary, setGallary] = useState([]);
@@ -10,7 +11,8 @@ const FoodGallary = () => {
       .then((data) => setGallary(data.indian_food));
   }, []);
   return (
-    <div className="mt-[120px] ">
+    <Slide direction="left" duration={1500}>
+       <div className="mt-[120px] ">
       <h1 className="text-[32px] md:text-[54px] mb-4 text-center font-bold text-[#41203B]">
         Food Gallary
       </h1>
@@ -21,6 +23,8 @@ const FoodGallary = () => {
         ))}
       </div>
     </div>
+    </Slide>
+   
   );
 };
 
