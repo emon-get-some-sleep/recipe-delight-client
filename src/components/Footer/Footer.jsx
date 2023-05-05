@@ -1,10 +1,12 @@
 import React from "react";
+import { Slide } from "react-awesome-reveal";
 import { FaFacebookF, FaInstagram, FaLinkedinIn, FaTwitter, FaUtensils } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
-    <div className="mt-[140px] grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-2">
+    <Slide direction='left' duration={1000}>
+            <div className="mt-[140px] grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-2">
      <div className="flex items-center justify-center">
      <div>
         <div className="flex items-center justify-center sm:justify-start gap-2">
@@ -43,6 +45,8 @@ const Footer = () => {
       </div>
       </div>
     </div>
+    </Slide>
+    
   );
 };
 

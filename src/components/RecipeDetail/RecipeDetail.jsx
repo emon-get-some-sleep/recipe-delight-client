@@ -5,12 +5,13 @@ import LazyLoad from "react-lazy-load";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { addToLocalStorage } from "../../utilities/localstorage";
+import { Slide } from "react-awesome-reveal";
 
 const RecipeDetail = ({recipe, showFavorite}) => {
     // console.log(recipe)
     // const {disabled, setDisabled} = useState(false);
     const [click, setClick] = useState(false);
-    console.log(showFavorite);
+    // console.log(showFavorite);
     
     const {recepi_id , recipe_id, image_url, recipe_name, rating, description, cooking_method, ingredients} = recipe;
     // i am using two recipe id because of spelling mistakes 
@@ -24,6 +25,7 @@ const RecipeDetail = ({recipe, showFavorite}) => {
   return (
     <div className="grid grid-cols-1 md:grid-cols-2  p-[40px] justify-between rounded-lg gap-4 bg-green-50">
       <div className="col-span-1">
+      <Slide direction='left' duration={2000}>
         <LazyLoad>
         <img
           className=" w-[400px] h-full  rounded-xl"
@@ -31,7 +33,10 @@ const RecipeDetail = ({recipe, showFavorite}) => {
           alt=""
         />
         </LazyLoad>
+        </Slide>
+        
       </div>
+     
       <div className="col-span-1">
         <h2 className="text-xl font-bold my-3">{recipe_name}</h2>
         <p className="">

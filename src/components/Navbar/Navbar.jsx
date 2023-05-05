@@ -2,6 +2,7 @@ import React, { useContext, useState } from "react";
 import { FaBars,  FaUtensils } from "react-icons/fa";
 import { Link, NavLink, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../AuthProviders/AuthProviders";
+import { Slide } from "react-awesome-reveal";
 
 const Navbar = () => {
    const {user, logOut} = useContext(AuthContext);
@@ -20,7 +21,8 @@ const Navbar = () => {
       })
     }
   return (
-    <>
+   
+       <>
     <nav className="flex  gap-2 justify-between items-center px-2">
       <div>
         
@@ -88,6 +90,8 @@ const Navbar = () => {
         
     </div>}
     </>
+    
+   
   );
 };
 

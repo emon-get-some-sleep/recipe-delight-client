@@ -3,6 +3,7 @@ import { FaFilePdf } from "react-icons/fa";
 import html2canvas from 'html2canvas';
 import jsPDF from 'jspdf';
 import LazyLoad from "react-lazy-load";
+import { Slide } from "react-awesome-reveal";
 
 
 
@@ -27,42 +28,49 @@ const Blogs = ({blog}) => {
   return (
     <div>
       <div id={id} className="p-4 relative">
-        <h2 className="font-bold text-[32px] sm:text[44px] md:text-[64px] my-4">
-          {title}
-        </h2>
-       
-       <LazyLoad>
-       <img
-        className="rounded-tr-[100px]  my-3"
-          src={image}
-          alt=""
-        />
-       </LazyLoad>
-       
-        <div className="flex justify-between w-[25%] gap-2 my-2 md:absolute right-[31%]">
-            <p className="border border-gray-500 rounded-[20px] p-2 text-xs text-gray-800">#{tags[0]}</p>
-            <p className="border border-gray-500 rounded-[20px] p-2 text-xs text-gray-800">#{tags[1]}</p>
-            <p className="border border-gray-500 rounded-[20px] p-2 text-xs text-gray-800">#{tags[2]}</p>
-            <p className="border border-gray-500 rounded-[20px] p-2 text-xs text-gray-800">#{tags[3]}</p>
+        <Slide direction="left" duration={2000}>
+          <h2 className="font-bold text-[32px] sm:text[44px] md:text-[64px] my-4">
+            {title}
+          </h2>
+        </Slide>
+
+        <Slide direction="right" duration={2000}>
+          <LazyLoad>
+            <img className="rounded-tr-[100px]  my-3" src={image} alt="" />
+          </LazyLoad>
+        </Slide>
+        <Slide direction='left' duration={2000}>
+         <div className="flex justify-between w-[25%] gap-2 my-2 md:absolute right-[31%]">
+          <p className="border border-gray-500 rounded-[20px] p-2 text-xs text-gray-800">
+            #{tags[0]}
+          </p>
+          <p className="border border-gray-500 rounded-[20px] p-2 text-xs text-gray-800">
+            #{tags[1]}
+          </p>
+          <p className="border border-gray-500 rounded-[20px] p-2 text-xs text-gray-800">
+            #{tags[2]}
+          </p>
+          <p className="border border-gray-500 rounded-[20px] p-2 text-xs text-gray-800">
+            #{tags[3]}
+          </p>
         </div>
         <p className="font-medium text-[18px] p-3 w-full md:w-[70%] md:mt-14 text-slate-600">
           {article}
         </p>
-       
-         
-        <button onClick={downloadPDF} disabled={!(loader===false)} className="flex items-center gap-2 border border-red-500 p-3 rounded-lg text-sm">
-            <FaFilePdf className="text-red-500" />
-            <span className="font-bold">{loader?(
-                  <span>Downloading</span>
-                ):(
-                  <span>Download</span>
-                )} as PDF</span>
+        <button
+          onClick={downloadPDF}
+          disabled={!(loader === false)}
+          className="flex items-center gap-2 border border-red-500 p-3 rounded-lg text-sm"
+        >
+          <FaFilePdf className="text-red-500" />
+          <span className="font-bold">
+            {loader ? <span>Downloading</span> : <span>Download</span>} as PDF
+          </span>
         </button>
-        
-   
+        </Slide>
+       
 
-      
-      
+        
       </div>
     </div>
   );
